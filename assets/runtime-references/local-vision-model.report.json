@@ -1,0 +1,98 @@
+{
+  "status": "ok",
+  "trainingAccuracy": 1.0,
+  "screenshotHoldoutAccuracy": 0.9185185185185185,
+  "screenshotHoldoutSamples": 135,
+  "screenshotHoldoutStrategy": "viewpoint-family-grouped",
+  "screenshotHoldoutGroups": 12,
+  "screenshotHoldoutMeanConfidence": 0.8631712794303894,
+  "screenshotMisclassifications": [
+    {
+      "source": "assets/reference-source/exhibit-captures/objekt-1/object-01_enlarged_over_45deg_01.png",
+      "expected": "object-01",
+      "predicted": "object-06",
+      "confidence": 0.334372
+    },
+    {
+      "source": "assets/reference-source/exhibit-captures/objekt-1/object-01_enlarged_over_45deg_01.png",
+      "expected": "object-01",
+      "predicted": "object-06",
+      "confidence": 0.476893
+    },
+    {
+      "source": "assets/reference-source/exhibit-captures/objekt-1/object-01_scene-selected_front_far_03.png",
+      "expected": "object-01",
+      "predicted": "object-05",
+      "confidence": 0.519307
+    },
+    {
+      "source": "assets/reference-source/exhibit-captures/objekt-1/object-01_scene-selected_front_far_03.png",
+      "expected": "object-01",
+      "predicted": "object-05",
+      "confidence": 0.935133
+    },
+    {
+      "source": "assets/reference-source/exhibit-captures/objekt-1/object-01_scene-selected_front_far_03.png",
+      "expected": "object-01",
+      "predicted": "object-06",
+      "confidence": 0.420094
+    },
+    {
+      "source": "assets/reference-source/exhibit-captures/objekt-1/object-01_scene-unselected_front_far_03.png",
+      "expected": "object-01",
+      "predicted": "object-05",
+      "confidence": 0.509187
+    },
+    {
+      "source": "assets/reference-source/exhibit-captures/objekt-1/object-01_scene-unselected_front_far_03.png",
+      "expected": "object-01",
+      "predicted": "object-05",
+      "confidence": 0.860836
+    },
+    {
+      "source": "assets/reference-source/exhibit-captures/objekt-1/object-01_scene-unselected_front_far_03.png",
+      "expected": "object-01",
+      "predicted": "object-06",
+      "confidence": 0.378638
+    },
+    {
+      "source": "assets/reference-source/exhibit-captures/objekt-2/object-02_scene-selected_front_near_01.png",
+      "expected": "object-02",
+      "predicted": "object-01",
+      "confidence": 0.787717
+    },
+    {
+      "source": "assets/reference-source/exhibit-captures/objekt-2/object-02_scene-selected_front_near_01.png",
+      "expected": "object-02",
+      "predicted": "object-01",
+      "confidence": 0.739307
+    },
+    {
+      "source": "assets/reference-source/exhibit-captures/objekt-2/object-02_scene-selected_front_near_03.png",
+      "expected": "object-02",
+      "predicted": "object-01",
+      "confidence": 0.482682
+    }
+  ],
+  "modelAngleHoldoutAccuracy": 0.3333333333333333,
+  "modelAngleHoldoutSamples": 6,
+  "modelAnglePredictions": [
+    "object-02",
+    "object-06",
+    "object-05",
+    "object-05",
+    "object-05",
+    "object-06"
+  ],
+  "modelAngleConfidence": [
+    0.776597,
+    0.511458,
+    0.46937,
+    0.477806,
+    0.865186,
+    0.693308
+  ],
+  "availableModelReferences": 120,
+  "modelBytes": 77256,
+  "externalApi": false
+}
