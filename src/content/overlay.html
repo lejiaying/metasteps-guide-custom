@@ -1,0 +1,94 @@
+<div id="app" class="app" lang="de">
+  <svg class="icon-definitions" aria-hidden="true">
+    <defs>
+      <symbol id="msg-i-help" viewBox="0 0 48 48"><circle cx="24" cy="24" r="18"/><path d="M18.5 18.2c.7-4.2 4-6.8 8.2-6.8 4.6 0 8.1 3 8.1 7.3 0 5.7-6.7 6.4-8.5 10.2-.5 1-.7 2.1-.7 3.3"/><path d="M25.5 38h.1"/></symbol>
+      <symbol id="msg-i-start" viewBox="0 0 48 48"><path d="M9 36V12l28 12L9 36Z"/><path d="M18 18v12"/></symbol>
+      <symbol id="msg-i-move" viewBox="0 0 48 48"><path d="M24 5v38M5 24h38"/><path d="m24 5-5 6m5-6 5 6M43 24l-6-5m6 5-6 5M24 43l5-6m-5 6-5-6M5 24l6 5m-6-5 6-5"/></symbol>
+      <symbol id="msg-i-exhibit" viewBox="0 0 48 48"><path d="M18 7h12l-1 8c6 4 8 10 7 18l-4 9H16l-4-9c-1-8 1-14 7-18l-1-8Z"/><path d="M17 18h14M15 34h18"/></symbol>
+      <symbol id="msg-i-lost" viewBox="0 0 48 48"><path d="M24 43S10 31 10 19a14 14 0 1 1 28 0c0 12-14 24-14 24Z"/><circle cx="24" cy="19" r="4"/></symbol>
+      <symbol id="msg-i-scan" viewBox="0 0 48 48"><path d="M8 19V8h11M29 8h11v11M40 29v11H29M19 40H8V29"/><path d="M13 24s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7Z"/><circle cx="24" cy="24" r="2.5"/></symbol>
+      <symbol id="msg-i-mouse" viewBox="0 0 48 48"><rect x="13" y="4" width="22" height="40" rx="11"/><path d="M24 4v14M13 19h22"/></symbol>
+      <symbol id="msg-i-click" viewBox="0 0 48 48"><path d="M15 24V13a6 6 0 0 1 12 0v11"/><path fill="#e4e4e1" d="M27 22c2-3 7-2 7 2 3-2 7 0 7 4v5c0 7-5 11-12 11h-4c-5 0-8-2-11-7l-5-8c-2-4 3-7 6-4l3 3"/><path d="M33 7l4-4M37 13h6M31 3v-1"/></symbol>
+      <symbol id="msg-i-drag" viewBox="0 0 64 48"><path d="M3 36c10 5 21 4 31-3M34 33l-8-4m8 4-3 8"/><g transform="translate(18 -6) rotate(45 27 25)"><path d="M17 27V14a4 4 0 0 1 8 0v10"/><path fill="#e4e4e1" d="M25 22c1.5-2.5 6-1.7 6 1.6 2.7-1.8 6 .2 6 3.6v3.3C37 38 32 43 24.5 43h-4.2c-5.1 0-8.6-2.4-11.1-6.6l-4.5-7.1c-2-3.4 2.6-6.2 5.3-3.7l3 2.8"/></g></symbol>
+      <symbol id="msg-i-map" viewBox="0 0 48 48"><path d="m6 11 11-5 14 5 11-5v31l-11 5-14-5-11 5V11Z"/><path d="M17 6v31M31 11v31"/></symbol>
+      <symbol id="msg-i-keyboard" viewBox="0 0 48 48"><rect x="4" y="9" width="40" height="30" rx="4"/><path d="M19 14h10v8H19zM9 25h8v8H9zM20 25h8v8h-8zM31 25h8v8h-8z"/></symbol>
+      <symbol id="msg-i-camera" viewBox="0 0 48 48"><circle cx="22" cy="22" r="10"/><path d="m30 30 11 11M22 16v12M16 22h12"/></symbol>
+      <symbol id="msg-i-expand" viewBox="0 0 48 48"><path d="M28 6h14v14M42 6 27 21M20 42H6V28M6 42l15-15"/></symbol>
+      <symbol id="msg-i-info" viewBox="0 0 48 48"><circle cx="24" cy="24" r="19"/><path d="M24 21v15M24 13h.1"/></symbol>
+      <symbol id="msg-i-scroll" viewBox="0 0 48 48"><rect x="14" y="3" width="20" height="42" rx="10"/></symbol>
+      <symbol id="msg-i-close" viewBox="0 0 48 48"><path d="M10 10l28 28M38 10 10 38"/></symbol>
+      <symbol id="msg-i-speaker" viewBox="0 0 48 48"><path d="M7 20h8l11-9v26l-11-9H7V20Z"/><path d="M32 18c4 4 4 8 0 12M37 13c8 7 8 15 0 22"/></symbol>
+    </defs>
+  </svg>
+
+  <aside class="demo-control" aria-label="Demoansicht">
+    <button id="demo-toggle" class="demo-toggle" type="button" aria-expanded="false">DEMO</button>
+    <div id="demo-menu" class="demo-menu" hidden>
+      <label for="scene-select">Erkennung testen</label>
+      <select id="scene-select">
+        <option value="auto">Echte Ansicht</option>
+        <option value="entry">Eingang</option>
+        <option value="explore">Bewegung</option>
+        <option value="before">Vor dem Objekt</option>
+        <option value="selected">Objekt ausgewählt</option>
+        <option value="camera">Kamera ausgerichtet</option>
+        <option value="object">Große Objektansicht</option>
+        <option value="info">Informationen geöffnet</option>
+        <option value="zoomed">Objekt vergrößert</option>
+        <option value="map">Karte geöffnet</option>
+        <option value="object1">Objekt 1</option>
+        <option value="object2">Objekt 2</option>
+        <option value="object3">Objekt 3</option>
+        <option value="object4">Objekt 4</option>
+        <option value="object5">Objekt 5</option>
+        <option value="object6">Objekt 6</option>
+        <option value="unknown">Unklare Ansicht</option>
+      </select>
+    </div>
+  </aside>
+
+  <section id="home-panel" class="panel home-panel" aria-labelledby="home-title">
+    <h1 id="home-title">Wie kann ich Ihnen helfen?</h1>
+    <div class="service-grid">
+      <button class="service-button" data-flow="start" type="button"><span class="service-icon" data-icon="start"></span><span>Wie fange ich an?</span></button>
+      <button class="service-button" data-flow="move" type="button"><span class="service-icon" data-icon="move"></span><span>Ich möchte mich im Raum bewegen.</span></button>
+      <button class="service-button" data-flow="exhibit" type="button"><span class="service-icon" data-icon="exhibit"></span><span>Ich stehe vor einem Ausstellungsstück.</span></button>
+      <button class="service-button" data-flow="lost" type="button"><span class="service-icon" data-icon="lost"></span><span>Ich habe mich verirrt.</span></button>
+    </div>
+    <button id="recognize-button" class="recognize-button" type="button"><span class="small-icon" data-icon="scan"></span><span>Was kann ich hier tun?</span></button>
+    <button id="home-close" class="ack-button home-ack" type="button">OK, danke.</button>
+  </section>
+
+  <div id="target-marker" class="target-marker" hidden aria-hidden="true"></div>
+
+  <section id="guide-card" class="panel guide-card" hidden aria-live="polite">
+    <div id="guide-copy" class="guide-copy">
+      <p id="guide-progress" class="guide-progress"></p>
+      <h2 id="guide-title"></h2>
+      <div class="guide-message"><span id="guide-step-icon" class="step-icon" aria-hidden="true"></span><span class="small-icon guide-audio-icon" data-icon="speaker" aria-hidden="true"></span><p id="guide-text" class="guide-text"></p></div>
+      <div id="guide-choices" class="guide-choices" hidden></div>
+      <button id="guide-ack" class="ack-button" type="button" hidden>OK, danke.</button>
+    </div>
+    <div id="guide-extra" class="guide-extra" hidden></div>
+    <div id="locator-retry" class="locator-retry" hidden>
+      <p id="locator-message">Bitte halten Sie das Ziel vollständig sichtbar.</p>
+      <button id="locator-retry-button" class="secondary-button" type="button">Erneut versuchen</button>
+    </div>
+  </section>
+
+  <div id="scene-annotations" class="scene-annotations" hidden aria-hidden="true"></div>
+
+  <section id="recognition-panel" class="panel recognition-panel" hidden aria-live="assertive">
+    <div id="recognition-spinner" class="recognition-spinner"></div>
+    <span id="recognition-icon" class="recognition-icon" hidden></span>
+    <h2 id="recognition-title">Einen Moment bitte.</h2>
+    <p id="recognition-text">Ich sehe mir Ihre Ansicht an.</p>
+    <p id="recognition-confidence" class="recognition-confidence" hidden></p>
+    <div id="recognition-actions" class="recognition-actions" hidden>
+      <button id="recognition-accept" class="primary-button" type="button">Ja, weiter</button>
+      <button id="recognition-reject" class="secondary-button" type="button">Nein, Hilfe auswählen</button>
+    </div>
+  </section>
+
+  <button id="help-pill" class="help-pill" type="button" hidden><span class="small-icon" data-icon="help"></span><span>Hilfe</span></button>
+</div>

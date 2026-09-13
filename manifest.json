@@ -1,0 +1,48 @@
+{
+  "manifest_version": 3,
+  "name": "Metasteps Orientierungshilfe",
+  "description": "Eine lokale, deutschsprachige Bedienhilfe für den Metasteps Viewer.",
+  "version": "0.10.1",
+  "minimum_chrome_version": "109",
+  "permissions": [
+    "activeTab"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "src/background/service-worker.js"
+  },
+  "action": {
+    "default_title": "Metasteps Hilfe öffnen"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.metasteps.com/viewer/*"
+      ],
+      "js": [
+        "src/guide/flows.de.js",
+        "src/recognition/classifier.js",
+        "src/content/overlay.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "src/content/overlay.html",
+        "src/content/overlay.css",
+        "assets/reference-scenes/*.png",
+        "assets/reference-source/map-open/*.png",
+        "assets/runtime-references/*.webp",
+        "assets/runtime-references/catalog.json",
+        "assets/runtime-references/local-vision-model.json"
+      ],
+      "matches": [
+        "https://*.metasteps.com/*"
+      ]
+    }
+  ]
+}

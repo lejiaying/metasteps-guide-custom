@@ -1,0 +1,9 @@
+{
+  "name": "metasteps-guide-custom-extension",
+  "private": true,
+  "version": "0.10.1",
+  "description": "Exhibition-specific Metasteps browser guide with local recognition.",
+  "scripts": {
+    "test": "node tests/verify-extension.js && node tests/verify-capture-worker.js"
+  }
+}
